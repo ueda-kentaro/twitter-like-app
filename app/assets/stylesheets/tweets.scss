@@ -1,3 +1,76 @@
-// Place all the styles related to the tweets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.actions{
+    float: right;
+}
+.tweet_list{
+    margin-top: 60px;
+    // height: 200px;
+    .per{
+        border-radius: 10px;
+        height: 130px;
+        border-style: solid;
+        padding: 10px;
+        // margin-top: 0px;
+        // margin: auto;
+        background-color: #DADADA;
+        &.mine{
+            background-color: #C1EFFF;
+        }
+         p {
+            margin: 0;
+        }
+        .image{
+            // display: inline-block;
+            width: 70px;
+            vertical-align: top;
+            float: left;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        // .content_info{
+        //     display: inline-block;
+        //     margin-left: 10px;
+        //     width: 500px;
+        //     vertical-align: top;
+        //     word-wrap: break-word;
+        // }
+        .tweet_info{
+            // width: 600px;
+            // height: 120px;
+            margin: auto;
+            // vertical-align: top;
+        .name{
+            display: inline-block;
+            margin-left: 10px;
+            // width: 100px;
+            // vertical-align: top;
+            // word-wrap: break-word;
+        }
+        .datetime{
+            display: inline-block;
+            margin-left: 10px;
+            // text-align: center;
+            // width: 300px;
+            // vertical-align: top;
+            // word-wrap: break-word;
+        }
+        }
+        .content{
+            // display: inline-block;
+            margin-left: 100px;
+            // width: 600px;
+            // padding: 30px;
+            // margin: auto;
+            // vertical-align: middle;
+            word-wrap: break-word;
+        }
+    }
+}
+
+

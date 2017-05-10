@@ -1,2 +1,47 @@
-<h1>Tweets#index</h1>
-<p>Find me in app/views/tweets/index.html.erb</p>
+<div class="form-horizontal col-md-8 col-xs-12 col-md-offset-2">
+    
+  <div class="alert">
+    <% if flash[:alert] %>
+      <% flash[:alert].each do |content| %>
+        <p class="alert"><%= content %></p>
+      <% end %>
+    <% end %>
+  </div>
+  
+  <div class="input">
+    <%= form_for @input_content do |f| %>
+      <div class="form-group">
+        <%= f.text_area :content, class: 'form-control', raw: 3, placeholder: '(本文は１４０字以内で投稿)'  %>
+      </div>
+      <div class="actions">
+        <%= f.submit '投稿', class:'btn btn-primary post' %>
+      </div>
+    <% end %>
+  </div>
+    
+  <div class="tweet_list">
+    <% @tweet.each do |t| %>
+      <div class="per <%= 'mine' if t.user.id == current_user.id %>">
+
+        <p class="image clearfix">
+          <% if t.user.image? %>
+            <%= image_tag t.user.image.url %>
+          <% end %>
+        </p>
+          
+        <div class="tweet_info">
+          <p class="name">
+            @<%= t.user.name %>
+          </p>
+          <p class="datetime">
+            <%=l t.created_at, format: :default, class: 'datetime' %>
+          </p>
+        </div>
+          <!--<p class="content_main">-->
+            <%= simple_format t.content, class:'content' %>
+          <!--</p>-->
+        <!--</div>-->
+      </div>
+    <% end %>
+  </div>
+</div>
