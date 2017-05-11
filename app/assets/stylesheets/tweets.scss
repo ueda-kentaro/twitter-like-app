@@ -1,16 +1,27 @@
 .actions{
     float: right;
 }
+
+// .header{
+//     height: 120px;
+//     .title{
+//         float: left;
+//     }
+//     ul{
+//         list-style: none;
+//         li{
+//             display: inline-block;   
+//             float: right;
+//         }
+//     }
+// }
 .tweet_list{
     margin-top: 60px;
-    // height: 200px;
     .per{
         border-radius: 10px;
         height: 130px;
         border-style: solid;
         padding: 10px;
-        // margin-top: 0px;
-        // margin: auto;
         background-color: #DADADA;
         &.mine{
             background-color: #C1EFFF;
@@ -19,7 +30,6 @@
             margin: 0;
         }
         .image{
-            // display: inline-block;
             width: 70px;
             vertical-align: top;
             float: left;
@@ -33,41 +43,19 @@
             display: block;
             clear: both;
         }
-        // .content_info{
-        //     display: inline-block;
-        //     margin-left: 10px;
-        //     width: 500px;
-        //     vertical-align: top;
-        //     word-wrap: break-word;
-        // }
         .tweet_info{
-            // width: 600px;
-            // height: 120px;
             margin: auto;
-            // vertical-align: top;
-        .name{
-            display: inline-block;
-            margin-left: 10px;
-            // width: 100px;
-            // vertical-align: top;
-            // word-wrap: break-word;
-        }
-        .datetime{
-            display: inline-block;
-            margin-left: 10px;
-            // text-align: center;
-            // width: 300px;
-            // vertical-align: top;
-            // word-wrap: break-word;
-        }
+            .name{
+                display: inline-block;
+                margin-left: 10px;
+            }
+            .datetime{
+                display: inline-block;
+                margin-left: 10px;
+            }
         }
         .content{
-            // display: inline-block;
             margin-left: 100px;
-            // width: 600px;
-            // padding: 30px;
-            // margin: auto;
-            // vertical-align: middle;
             word-wrap: break-word;
         }
     }

@@ -1,13 +1,6 @@
 <div class="form-horizontal col-md-8 col-xs-12 col-md-offset-2">
-    
-  <div class="alert">
-    <% if flash[:alert] %>
-      <% flash[:alert].each do |content| %>
-        <p class="alert"><%= content %></p>
-      <% end %>
-    <% end %>
-  </div>
   
+
   <div class="input">
     <%= form_for @input_content do |f| %>
       <div class="form-group">
@@ -20,9 +13,8 @@
   </div>
     
   <div class="tweet_list">
-    <% @tweet.each do |t| %>
+    <% @tweets.each do |t| %>
       <div class="per <%= 'mine' if t.user.id == current_user.id %>">
-
         <p class="image clearfix">
           <% if t.user.image? %>
             <%= image_tag t.user.image.url %>
