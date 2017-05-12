@@ -1,11 +1,19 @@
 <div class="form-horizontal col-md-8 col-xs-12 col-md-offset-2">
-  
 
   <div class="input">
     <%= form_for @input_content do |f| %>
+      <div class="alert">
+        <% if flash[:alert] %>
+          <% flash[:alert].each do |content| %>
+            <p class="alert">・<%= content %></p>
+          <% end %>
+        <% end %>
+      </div>
+    
       <div class="form-group">
         <%= f.text_area :content, class: 'form-control', raw: 3, placeholder: '(本文は１４０字以内で投稿)'  %>
       </div>
+
       <div class="actions">
         <%= f.submit '投稿', class:'btn btn-primary post' %>
       </div>

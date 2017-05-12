@@ -21,17 +21,17 @@ class TweetsController < ApplicationController
     redirect_to action: :index
   end
   
-  def update 
-    @tweet =  Tweet.find(params[:id])
-    tweet.attributes = input_content_param
-    tweet.user_id = current_user.id
-    if tweet.valid?
-      tweet.save!
-    else
-      flash[:alert] = tweet.errors.full_messages
-    end
-    redirect_to action: :index
-  end
+  # def update 
+  #   @tweet =  Tweet.find(params[:id])
+  #   tweet.attributes = input_content_param
+  #   tweet.user_id = current_user.id
+  #   if tweet.valid?
+  #     tweet.save!
+  #   else
+  #     flash[:alert] = tweet.errors.full_messages
+  #   end
+  #   redirect_to action: :index
+  # end
 
   private
   def input_content_param
